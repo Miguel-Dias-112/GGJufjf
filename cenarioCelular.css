@@ -1,0 +1,53 @@
+@media screen and (max-width: 600px){
+    main{
+    
+        width:  100%;
+        height: 100%;
+         background-color: whitesmoke;
+         border-radius: 0px;
+         border: 0px solid black;
+         
+         display: grid;
+         justify-content: center;
+         justify-items: center;
+         align-content: center;
+         align-items: center;
+         grid-template-columns: repeat(10,1fr);
+         grid-template-rows: repeat(10,1fr);
+     }
+     #mesaCartas{
+
+        grid-area: 9/1/11/11;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background: red ;
+    }
+    #inimigo{
+        grid-area: 5/6
+                   /5/6;
+       
+        width:  300%;
+        aspect-ratio: 2/3;
+        background: blue ;
+    }
+    #alegriaInimigo{
+        grid-area: 1/1/1/6;
+    
+        width: 100%;
+        height: 100%;
+        top: 0px;
+
+        background: green ;
+    
+    }
+    #alegriaSua{
+        grid-area: 8/6/8/11;
+    
+        width: 100%;
+        height: 100%;
+        top: 0px;
+
+        background: orange ;
+    }
+}
