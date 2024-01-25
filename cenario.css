@@ -14,7 +14,7 @@ body{
 }
 main{
     
-   width: 80%;
+   width: 90%;
     aspect-ratio: 16/9;
     background-color: whitesmoke;
     border-radius: 0px;
@@ -42,7 +42,7 @@ main{
                /6/8;
    
     width: 80%;
-    height: 100%;
+    aspect-ratio: 2/3;
     background: blue ;
 }
 #alegriaInimigo{
