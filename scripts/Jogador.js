@@ -1,4 +1,3 @@
-import {pegarCarta} from './Carta.js';
 
 
 let jogador = {};

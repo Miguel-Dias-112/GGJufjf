@@ -1,17 +1,26 @@
 
 
-import { Idosa } from "../inimigos/Inimigos.js";
 import { getJogador } from "../../Jogador.js";
 import { PorDecknaTela, atualizarValores } from "../../Tela.js";
 import { criarMapa } from "../../mapa.js";
-
+import { inimigos } from "../inimigos/Inimigos.js";
 const j1 = getJogador();
-export const inimigo = Idosa
+
+export let inimigo = inimigos[0]  
+
+export function setInimigo(_inimigo){
+    inimigo=_inimigo
+}
+
+export function startGame(){
+    PorDecknaTela(j1.maodoJogador);
+    atualizarValores()
+
+}
 
 
-atualizarValores()
-PorDecknaTela(j1.maodoJogador);
-j1.checarVida();    
+
+
 
 criarMapa();
 export  function cicloJogo(carta){
