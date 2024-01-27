@@ -1,16 +1,16 @@
-function porCartaTela(cartas){
+export function porCartaTela(cartas){
     
     const mesaCartas = document.querySelector('#mesaCartas');
-    function criarCarta(descricao){
+    function criarContainerCarta(descricao){
         let cartaContainer = document.createElement('div');
-        let descricao = document.createElement('p');
-        descricao.textContent = descricao
+        let descricaoCtn = document.createElement('p');
+        descricaoCtn.textContent = descricao
         cartaContainer.classList.add('carta');
-        cartaContainer.appendChild(descricao);
+        cartaContainer.appendChild(descricaoCtn);
         mesaCartas.appendChild(cartaContainer);
     }
     
     cartas.forEach(carta => {
-        criarCarta(carta.descricao);
+        criarContainerCarta(carta.descricao);
     });
 }

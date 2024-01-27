@@ -1,9 +1,9 @@
-export function criarCarta(_nome, _descricao, _status, _efetividadeCom){
+export function criarCarta(_descricao, _status, _efetividadeCom,_poucoEfetivoCom){
     const carta ={}
     /// referencia ao html
 
     //variaveis estasticas
-    carta.nome = _nome
+
     carta.descricao = _descricao
     carta.dano = _status.dano
     carta.defesa = _status.defesa 
