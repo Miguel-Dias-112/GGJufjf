@@ -1,0 +1,24 @@
+#mesaCartas{
+
+    grid-area: 8/1/11/6;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: red ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+#mesaCartas .carta{
+    height: 50%;
+    aspect-ratio: 1/1;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    padding: 10px;
+}
