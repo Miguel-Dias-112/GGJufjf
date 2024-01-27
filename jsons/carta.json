@@ -1,0 +1,10 @@
+[
+    {
+        "descrição": "GitHub Copilot",
+        "status": {
+
+        },
+        "efetividade": ["Python", "JavaScript", "Java"],
+        "inefetivade": [""]
+    }
+]

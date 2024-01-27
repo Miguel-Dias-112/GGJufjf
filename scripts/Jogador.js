@@ -19,12 +19,9 @@ function criaJogador(){
     function definirCliquePraDescerMao(){
         maodoJogador.forEach(carta => {
             carta.cartaContainer.addEventListener('click', function(){
-
-                
                 const cartaIndex = maodoJogador.indexOf(carta);
                 maodoJogador.splice(cartaIndex, 1);
-           
-
+                porCartaTela(maodoJogador);
             });
         });
     }
