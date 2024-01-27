@@ -19,9 +19,10 @@ function criarCarta(_nome, _descricao, _status, _efetividadeCom){
             return
         }
         if(poucoEfetivo){
+            inimigo.graca -= ( dano - defesa) * 0.5;
             return
         }
-        inimigo.graca += ( dano - defesa) 
+        inimigo.graca += ( dano - defesa);
     }
 
     carta.nome = nome
