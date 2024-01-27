@@ -1,6 +1,6 @@
 import { start } from "./Tela.js";
-import { criaJogador } from "./Jogador.js";
+import { getJogador } from "./Jogador.js";
 
 
-const j1 = criaJogador();
+const j1 = getJogador();
 start(j1.maodoJogador);

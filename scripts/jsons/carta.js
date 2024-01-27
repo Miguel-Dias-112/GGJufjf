@@ -26,7 +26,7 @@ const CARTAS = [
     {
         "descricao": "teste2",
         "status": {
-x
+
         },
         "efetividade": ["Python", "JavaScript", "Java"],
         "inefetivade": [""]
