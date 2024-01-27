@@ -1,34 +1,27 @@
 
 import {pegarCarta} from './Carta.js';
 import CARTAS from './jsons/carta.js'
+import { getJogador } from './Jogador.js';
+import { cicloJogo } from './jsons/Jogo/Jogo.js';
 function randomNumberInterval(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a
-  }
-function puxarCarta(maodoJogador){
+}
+
+function randomizarCartas(maodoJogador){
    
-    while(maodoJogador.length < 3)
-    {
-        const totalCarta = CARTAS.length-1; // tamanho de cartas do json
-        let indexCNova = randomNumberInterval(0,totalCarta);
-
-        let tamanho = maodoJogador.length;
-
-        for (let i=0;i<tamanho;i++)
-        {
-            let index= CARTAS.indexOf(maodoJogador[i]);
-            if (indexCNova == index){
-                console.log(maodoJogador,indexCNova);
-
-                indexCNova =randomNumberInterval(0,totalCarta);
-                i=0;
-            }
-        }
-        maodoJogador.push(pegarCarta(indexCNova));
-    }
-
-} 
-function porCartaTela(cartas,missão){
+    const totalCarta = CARTAS.length; // tamanho de cartas do json
+    let indexC1 
+    let indexC2 
+    do{
+        indexC1 = randomNumberInterval(0,totalCarta-1);
+        indexC2 = randomNumberInterval(0,totalCarta-1);
+    }while(indexC1==indexC2)
     
+    maodoJogador.push(pegarCarta(indexC1));
+    maodoJogador.push(pegarCarta(indexC2));
+}
+
+function porCartaTela(cartas, missão){
     const mesaCartas = document.querySelector('#mesaCartas');
     mesaCartas.innerHTML = '';
 
@@ -37,10 +30,9 @@ function porCartaTela(cartas,missão){
             let descricaoCtn = document.createElement('p');
 
             cartaContainer.addEventListener('click', function(){
-
                 
-              
-
+                //////CICLO JOGO
+                cicloJogo(carta);
             });
             descricaoCtn.textContent = descricao
             cartaContainer.classList.add('carta');
@@ -56,9 +48,11 @@ function porCartaTela(cartas,missão){
 }
 
 
-export function PorDecknaTela(maodoJogador){
-    console.log('por deck na tela')
-    puxarCarta(maodoJogador);
+export function PorDecknaTela(){
+    let maodoJogador = getJogador().maodoJogador;
+    
+    getJogador().maodoJogador = [];
+    randomizarCartas(maodoJogador);
     porCartaTela(maodoJogador);
     
 }

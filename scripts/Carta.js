@@ -1,7 +1,6 @@
 import CARTAS from './jsons/carta.js' 
 
 export function pegarCarta(index){
-    console.log('pegando carta')
     const carta ={}
     /// referencia ao html
 
@@ -9,20 +8,23 @@ export function pegarCarta(index){
     carta.dados = CARTAS[index]
     carta.cartaContainer = document.createElement('div');
 
-    carta.ataque =  function ( inimigo ){
+    carta.ataque =  function (inimigo){
 
-        muitoefetivo = inimigo.nome in efetividadeCom;
-        poucoEfetivo = inimigo.nome in poucoEfetivoCom;
+        let muitoefetivo =  carta.dados.efetividade.includes(inimigo.nome);
+        let poucoEfetivo = carta.dados.inefetivade.includes(inimigo.nome);
+        console.log(carta.dados)
+
         if(muitoefetivo){
-            inimigo.graca += (carta.dano - carta.defesa) * 1.5;
-            return;
+            inimigo.graca += (carta.dados.status.status.dano - carta.dados.status.defesa) * 1.5;
+            return "efetivo";
         }
         if(poucoEfetivo){
-            inimigo.graca -= (carta.dano - carta.defesa) * 0.5;
-            return;
+            inimigo.graca -= (carta.dados.status.dano - carta.dados.status.defesa) * 0.5;
+            return "nefetivo";
         }
-        inimigo.graca += (carta.dano - carta.defesa);
-
+        
+        inimigo.graca += (carta.dados.status.dano - carta.dados.status.defesa);
+        return "neutro"
     }
     
 
