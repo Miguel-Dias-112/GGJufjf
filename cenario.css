@@ -40,6 +40,7 @@ main{
     aspect-ratio: 2/3;
     
     background-image: url('./assets/idosa/Idosa1.png');
+  
     background-repeat: no-repeat;
     background-size: cover;
 }

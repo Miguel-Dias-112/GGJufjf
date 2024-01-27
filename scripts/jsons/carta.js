@@ -1,6 +1,6 @@
 const CARTAS = [
     {
-        "descricao": "GitHub Copilot",
+        "descricao": "teste8",
         "status": {
 
         },
@@ -8,7 +8,7 @@ const CARTAS = [
         "inefetivade": [""]
     },
     {
-        "descricao": "st",
+        "descricao": "teste3",
         "status": {
 
         },
@@ -16,9 +16,17 @@ const CARTAS = [
         "inefetivade": [""]
     },
     {
-        "descricao": "teste",
+        "descricao": "teste1",
         "status": {
 
+        },
+        "efetividade": ["Python", "JavaScript", "Java"],
+        "inefetivade": [""]
+    },
+    {
+        "descricao": "teste2",
+        "status": {
+x
         },
         "efetividade": ["Python", "JavaScript", "Java"],
         "inefetivade": [""]

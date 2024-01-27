@@ -7,7 +7,7 @@ export function pegarCarta(index){
 
  
     carta.dados = CARTAS[index]
-
+    console.log(CARTAS)
     carta.cartaContainer = document.createElement('div');
 
     carta.ataque =  function ( inimigo ){

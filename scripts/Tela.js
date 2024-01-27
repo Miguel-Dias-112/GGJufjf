@@ -2,6 +2,30 @@
 
 
 import {pegarCarta} from './Carta.js';
+function randomNumberInterval(a, b) {
+    return Math.floor(Math.random() * (b - a + 1)) + a
+  }
+function puxarCarta(maodoJogador){
+    console.log('puxando carta')
+   
+    while(maodoJogador.length < 3)
+    {
+        const totalCarta = 3; // tamanho de cartas do json
+        let cNova = randomNumberInterval(0,totalCarta);
+        let tamanho = maodoJogador.length;
+
+        for (let i=0;i<tamanho;i++)
+        {
+            if (cNova == maodoJogador[i])
+            {
+                cNova =randomNumberInterval(0,totalCarta);
+                i=0;
+            }
+        }
+        maodoJogador.push(pegarCarta(cNova));
+    }
+
+} 
 function porCartaTela(cartas){
     
     const mesaCartas = document.querySelector('#mesaCartas');
@@ -13,9 +37,12 @@ function porCartaTela(cartas){
 
 
             cartaContainer.addEventListener('click', function(){
+
                 const cartaIndex = cartas.indexOf(carta);
                 cartas.splice(cartaIndex, 1);
+                puxarCarta(cartas);
                 porCartaTela(cartas);
+
             });
             descricaoCtn.textContent = descricao
         
@@ -31,43 +58,10 @@ function porCartaTela(cartas){
 
 }
 
-function puxarCarta(maodoJogador){
-    console.log('puxando carta')
-    maodoJogador.push(pegarCarta(2));
-    maodoJogador.push(pegarCarta(1));
-    maodoJogador.push(pegarCarta(0));
 
-    // while(maodoJogador.length < 3)
-    // {
-    //     const totalCarta = 2; // tamanho de cartas do json
-    //     let cNova = Math.floor(Math.random() * (totalCarta )) ;
-    //     let tamanho = maodoJogador.length;
-
-    //     for (let i=0;i<tamanho;i++)
-    //     {
-    //         if (cNova == maodoJogador[i])
-    //         {
-    //             cNova = Math.floor(Math.random() * (tamanho )) + 1;
-    //             i=0;
-    //         }
-    //     }
-
-        
-    // }
-
-} 
 export function start(maodoJogador){
     puxarCarta(maodoJogador);
     porCartaTela(maodoJogador);
-}
-    
-export function addclick(maodoJogador){
-  
-    maodoJogador.forEach(carta => {
-        carta.cartaContainer.addEventListener('click', function(){
-           
-        });
-    });
-
     
 }
+    
