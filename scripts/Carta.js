@@ -1,9 +1,12 @@
+import CARTAS from './jsons/carta.js' 
+
 export function pegarCarta(index){
+    console.log('pegando carta')
     const carta ={}
     /// referencia ao html
 
-    const _dados = JSON.parse( readFile('../jsons/carta.json', 'utf8'));
-    carta.dados = _dados[index]
+ 
+    carta.dados = CARTAS[index]
 
     carta.cartaContainer = document.createElement('div');
 
