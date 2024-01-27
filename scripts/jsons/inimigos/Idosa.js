@@ -21,7 +21,6 @@ export const Idosa = {
        
         let jogador = getJogador()
         const fala = this.falas[efetividade]
-        console.log(fala.texto)
 
         jogador.vida -= fala.dano
         return fala.texto
