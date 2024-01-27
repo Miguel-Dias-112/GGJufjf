@@ -12,18 +12,17 @@ export function pegarCarta(index){
 
         let muitoefetivo =  carta.dados.efetividade.includes(inimigo.nome);
         let poucoEfetivo = carta.dados.inefetivade.includes(inimigo.nome);
-        console.log(carta.dados)
 
         if(muitoefetivo){
-            inimigo.graca += (carta.dados.status.status.dano - carta.dados.status.defesa) * 1.5;
+            inimigo.graca += 2
             return "efetivo";
         }
         if(poucoEfetivo){
-            inimigo.graca -= (carta.dados.status.dano - carta.dados.status.defesa) * 0.5;
+            inimigo.graca -= 0;
             return "nefetivo";
         }
         
-        inimigo.graca += (carta.dados.status.dano - carta.dados.status.defesa);
+        inimigo.graca += 1;
         return "neutro"
     }
     

@@ -53,6 +53,9 @@ main{
     top: 0px;
     border-radius: 15px;
     background: green ;
+    display: flex;
+       justify-content: center;
+        align-items: center;
 
 }
 #alegriaSua{
@@ -63,4 +66,7 @@ main{
     top: 0px;
     border-radius: 15px;
     background: orange ;
+    display: flex;
+;   justify-content: center;
+    align-items: center;
 }

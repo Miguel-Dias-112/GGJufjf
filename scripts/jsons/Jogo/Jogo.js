@@ -2,10 +2,14 @@
 
 import { Idosa } from "../inimigos/Idosa.js";
 import { getJogador } from "../../Jogador.js";
-import { PorDecknaTela } from "../../Tela.js";
-const j1 = getJogador();
-const inimigo = Idosa
+import { PorDecknaTela, atualizarValores } from "../../Tela.js";
 
+
+const j1 = getJogador();
+export const inimigo = Idosa
+
+
+atualizarValores()
 PorDecknaTela(j1.maodoJogador);
 j1.checarVida();    
 
@@ -16,6 +20,5 @@ export  function cicloJogo(carta){
     PorDecknaTela(cartas);
     let efetividadeJogada = carta.ataque(inimigo)
     inimigo.atacar(efetividadeJogada)
-
-    console.log(inimigo.graca, j1.vida)
+    atualizarValores()
 }

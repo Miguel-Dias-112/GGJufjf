@@ -1,39 +1,48 @@
 const CARTAS = [
     {
-        "descricao": "teste8",
-        "status": {
-            "dano": 15,
-            "defesa": 0,
-        },
-        "efetividade": ["Python", "JavaScript", "Java"],
+        "descricao": "Piada sobre espancar Idosa",
+        "efetividade": ["Genz"],
+        "inefetivade": ["Idosa"]
+    },
+    {
+        "descricao": "Video de gatinho fofo engraçado",
+        "efetividade": ["Idosa"],
+        "inefetivade": ["Genz"]
+    },
+    {
+        "descricao": "Comentario sobre celebridade",
+        "efetividade": ["Idosa"],
         "inefetivade": [""]
     },
     {
-        "descricao": "teste3",
-        "status": {
-            "dano": 0,
-            "defesa": 1,
-        },
-        "efetividade": ["Python", "JavaScript", "Java"],
+        "descricao": "Previsão do tempo",
+        "efetividade": [""],
         "inefetivade": [""]
     },
     {
-        "descricao": "teste1",
-        "status": {
-            "dano":1 ,
-            "defesa": 2,
-        },
-        "efetividade": ["Python", "JavaScript", "Java"],
-        "inefetivade": [""]
+        "descricao": "Gritar palavras aleatórias",
+        "efetividade": ["Jovem"],
+        "inefetivade": ["Idosa"]
     },
     {
-        "descricao": "teste2",
-        "status": {
-            "dano": 1,
-            "defesa": 0,
-        },
-        "efetividade": ["Python", "JavaScript", "Java"],
-        "inefetivade": [""]
+        "descricao": "Recita bordão do Zorra Total",
+        "efetividade": ["Idosa", "Palhaço"],
+        "inefetivade": ["Jovem", "Padre"]
+    },
+    {
+        "descricao": "Conta piada de cunho religioso",
+        "efetividade": ["Jovem"],
+        "inefetivade": ["Idosa", "Padre", "Militar"]
+    },
+    {
+        "descricao": "Conta piada de cunho preconceituoso",
+        "efetividade": ["Idosa", "Militar", "Hetero"],
+        "inefetivade": ["Jovem", "Padre"]
+    },
+    {
+        "descricao": "Faz referência a filmes de comédia antigos",
+        "efetividade": ["Idosa", "Hetero"],
+        "inefetivade": ["Jovem"]
     },
     
 
