@@ -1,4 +1,4 @@
 
 
-import { missão } from "./MissãoIdosa.js";
-missão()
+import { MissãoIdosa } from "./MissãoIdosa.js";
+MissãoIdosa()

@@ -27,7 +27,7 @@ function puxarCarta(maodoJogador){
     }
 
 } 
-function porCartaTela(cartas){
+function porCartaTela(cartas,missão){
     
     const mesaCartas = document.querySelector('#mesaCartas');
     mesaCartas.innerHTML = '';
@@ -38,10 +38,8 @@ function porCartaTela(cartas){
 
             cartaContainer.addEventListener('click', function(){
 
-                const cartaIndex = cartas.indexOf(carta);
-                cartas.splice(cartaIndex, 1);
-                puxarCarta(cartas); 
-                porCartaTela(cartas);
+                
+              
 
             });
             descricaoCtn.textContent = descricao
