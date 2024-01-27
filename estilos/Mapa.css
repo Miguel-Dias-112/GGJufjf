@@ -1,0 +1,28 @@
+.mapa{
+    position: absolute;
+    top:calc(calc(50% - 45%) - 2.5px);
+    left:calc(calc(50% - 40%) - 5px);
+
+    width: 80%;
+    border-radius: 18px;
+
+    border: 5px solid black;
+    aspect-ratio: 16/9;
+    background-color:whitesmoke ;
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5,1fr);
+
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.molduarPersonagem{
+    width: 80%;
+    aspect-ratio: 1/1;
+    background-color: red;
+}
