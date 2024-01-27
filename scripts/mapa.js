@@ -12,22 +12,22 @@ export function criarFase(){
     let progressInimigo= document.createElement("progress")
     progressInimigo.id="progressoAlegriaInimigo"
     vidainimigo.appendChild(progressInimigo)
-    centralizador.appendChild(vidainimigo)
+    main.appendChild(vidainimigo)
 
     let vidaSua = document.createElement("div")
     vidaSua.id="alegriaSua"
     let progressSeu= document.createElement("progress")
     progressSeu.id="progressoAlegriaSua"
     vidaSua.appendChild(progressSeu)
-    centralizador.appendChild(vidaSua)
+    main.appendChild(vidaSua)
 
     let mesa = document.createElement('div')
     let inimigo = document.createElement('div')
     inimigo.id="inimigo"
     mesa.id="mesaCartas"
     
-    centralizador.appendChild(mesa)
-    centralizador.appendChild(inimigo)
+    main.appendChild(mesa)
+    main.appendChild(inimigo)
 
     main.appendChild(centralizador)
     progressSeu.value=10
