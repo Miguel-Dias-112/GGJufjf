@@ -21,28 +21,33 @@ const CARTAS = [
     },
     {
         "descricao": "Gritar palavras aleatórias",
-        "efetividade": ["Jovem"],
+        "efetividade": ["Genz"],
         "inefetivade": ["Idosa"]
     },
     {
         "descricao": "Recita bordão do Zorra Total",
         "efetividade": ["Idosa", "Palhaço"],
-        "inefetivade": ["Jovem", "Padre"]
+        "inefetivade": ["Genz", "Padre"]
     },
     {
         "descricao": "Conta piada de cunho religioso",
-        "efetividade": ["Jovem"],
+        "efetividade": ["Genz"],
         "inefetivade": ["Idosa", "Padre", "Militar"]
     },
     {
         "descricao": "Conta piada de cunho preconceituoso",
-        "efetividade": ["Idosa", "Militar", "Hetero"],
-        "inefetivade": ["Jovem", "Padre"]
+        "efetividade": ["Idosa", "Militar"],
+        "inefetivade": ["Genz", "Padre"]
     },
     {
         "descricao": "Faz referência a filmes de comédia antigos",
         "efetividade": ["Idosa", "Hetero"],
-        "inefetivade": ["Jovem"]
+        "inefetivade": ["Genz"]
+    },
+    {
+        "descricao": "Faz referência a comediantes de stand-up",
+        "efetividade": ["Genz", "Hetero"],
+        "inefetivade": ["Idosa", "Padre"]
     },
     
 
