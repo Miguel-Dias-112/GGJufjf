@@ -1,14 +1,21 @@
 import {pegarCarta} from './Carta.js';
 
 
-export function criaJogador(){
-    let jogador = {};
-    
-    jogador.maodoJogador = [];
-    jogador.vida=4;
-    jogador.alegriaCtn= document.querySelector('#alegria');
-    
+let jogador = {};
+jogador.maodoJogador = [];
+jogador.vida=4;
+jogador.alegriaCtn= document.querySelector('#alegria');
+jogador.checarVida = function(){
+    if(this.vida <= 0){
+        window.alert('Você perdeu');
+        window.location.reload();
+    }
+}
 
+
+export function getJogador(){
+  
+   
     return jogador;
 
 }

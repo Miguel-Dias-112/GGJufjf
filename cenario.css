@@ -20,7 +20,8 @@ main{
     border-radius: 0px;
     border: 5px solid black;
     background: url('/assets/idosa/cenario\ idosa\ 1.png') ;
-
+    background-repeat: no-repeat;
+    background-size: cover; 
     border-radius: 18px;
     display: grid;
     justify-content: center;
