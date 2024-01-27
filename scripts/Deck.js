@@ -1,7 +1,6 @@
-import { criarCarta } from "./Carta.js";
 
 
-function criarDeck( cartas ){
+export function criarDeck( cartas ){
     const deck = {};    
     deck.cartas = cartas;
 

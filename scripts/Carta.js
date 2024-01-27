@@ -1,4 +1,4 @@
-function criarCarta(_nome, _descricao, _status, _efetividadeCom){
+export function criarCarta(_nome, _descricao, _status, _efetividadeCom){
     const carta ={}
     /// referencia ao html
 
