@@ -3,31 +3,33 @@ function criarCarta(_nome, _descricao, _status, _efetividadeCom){
     /// referencia ao html
 
     //variaveis estasticas
-    const nome = _nome
-    const descricao = _descricao
-    const dano = _status.dano
-    const defesa = _status.defesa 
+    carta.nome = _nome
+    carta.descricao = _descricao
+    carta.dano = _status.dano
+    carta.defesa = _status.defesa 
 
-    const efetividadeCom = _efetividadeCom
-    const poucoEfetivoCom = _poucoEfetivoCom
+    carta.efetividadeCom = _efetividadeCom
+    carta.poucoEfetivoCom = _poucoEfetivoCom
+
     // funções
-    function ataque ( inimigo ){
-        muitoefetivo = inimigo.nome in efetividadeCom 
-        poucoEfetivo = inimigo.nome in poucoEfetivoCom
+
+    carta.ataque =  function ( inimigo ){
+
+        muitoefetivo = inimigo.nome in efetividadeCom;
+        poucoEfetivo = inimigo.nome in poucoEfetivoCom;
+
         if(muitoefetivo){
-            inimigo.graca += ( dano - defesa) * 1.5;
-            return
+            inimigo.graca += (carta.dano - carta.defesa) * 1.5;
+            return;
         }
         if(poucoEfetivo){
-            inimigo.graca -= ( dano - defesa) * 0.5;
-            return
+            inimigo.graca -= (carta.dano - carta.defesa) * 0.5;
+            return;
         }
-        inimigo.graca += ( dano - defesa);
-    }
+        inimigo.graca += (carta.dano - carta.defesa);
 
-    carta.nome = nome
-    
-    carta.acao = function( player ){
-        player.graca += 1
-    }   
+    }
+            
+    return carta;
 }
+
