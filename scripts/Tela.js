@@ -2,8 +2,7 @@
 import {pegarCarta} from './Carta.js';
 import CARTAS from './jsons/carta.js'
 import { getJogador } from './Jogador.js';
-import { cicloJogo } from './jsons/Jogo/Jogo.js';
-import { inimigo } from './jsons/Jogo/Jogo.js';
+import { cicloJogo,inimigo    } from './jsons/Jogo/Jogo.js';
 function randomNumberInterval(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a
 }
@@ -60,9 +59,10 @@ export function PorDecknaTela(){
 
 export function atualizarValores(){
     const jogador = getJogador();
+    
     const barraJogador = document.querySelector('#progressoAlegriaSua');
     const barraInimigo = document.querySelector('#progressoAlegriaInimigo');
-    
+ 
     barraInimigo.value = inimigo.graca;
     barraJogador.value = jogador.vida;
 }
