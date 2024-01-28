@@ -102,7 +102,7 @@ export function atualizarValores(){
         
     }
 
-    preencherBarra(barraJogador, jogador.vida,'URL(../assets/coração.png)','URL(../assets/coraçãoVazio.png)');
+    preencherBarra(barraJogador, jogador.vida,'URL(./../assets/coração.png)','URL(./../assets/coraçãoVazio.png)');
 
 
     
