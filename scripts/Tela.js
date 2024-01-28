@@ -153,22 +153,20 @@ export function imprimeResultado( resultado){
     let div= document.createElement('div')
     div.classList.add('resultado')
 
-    let h3 = document.createElement('h3')
+    let h1 = document.createElement('h1')
     let button=document.createElement('button')
     
     button.textContent="voltar"
     button.onclick=()=>{
         criarMapa()
         setVida(10)
-        
-
     }
 
 
-    h3.textContent= resultado;
-
+    h1.textContent= resultado;
+h1.textContent='Vitoria'
     div.appendChild(button)
-    div.appendChild(h3)
+    div.appendChild(h1)
     main.appendChild(div)
 
 }

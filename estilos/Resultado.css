@@ -1,3 +1,8 @@
+
+@font-face {
+    font-family: pixel;
+    src: url(../assets/Pixelation\(2\).ttf);
+  }
 .resultado{
     position: absolute;
     width: 100vw;
@@ -13,14 +18,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction:  column-reverse;
 }
+.resultado h1{
+    margin: 0%;
+    padding: 0%;
+    font-size: 70px;
+    font-family: 'pixel';
 
+}
 .resultado button{
     width: 150px;
     height: 80px;
     opacity: 1;
     background-color: transparent;
     text-decoration: none;
-    border: none;
-    
+    border: 0px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

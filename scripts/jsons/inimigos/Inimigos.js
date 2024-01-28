@@ -23,6 +23,7 @@ function criarInimigo(nome,fala,area,bottom){
     inimigo.area=area
     inimigo.nome = nome
     inimigo.bottom=bottom
+    inimigo.derrotado=false
     inimigo.falas = {
         efetivo:fala[0],
         neutro:fala[1],

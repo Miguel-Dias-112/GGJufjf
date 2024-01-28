@@ -21,10 +21,12 @@ export function startGame(){
 export function checaResultado(){
 
     if(inimigo.graca >= 10 && j1.vida > 0) {
+        inimigo.derrotado=true
         return 'Vitoria';
     }
     if(inimigo.graca < 10 && j1.vida <= 0) {
-            return 'Vitoria';
+        inimigo.derrotado=true
+        return 'Vitoria';
     }
     if(inimigo.graca < 10 && j1.vida > 0){
         return "continua";
@@ -48,9 +50,8 @@ export  function cicloJogo(carta){
         
 
         let resultado = checaResultado()
-        imprimeResultado()
         if(resultado!="continua"){
-          //  imprimeResultado(resultado)
+          imprimeResultado(resultado)
         }
     }, 1000);
 

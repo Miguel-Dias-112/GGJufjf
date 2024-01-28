@@ -1,5 +1,5 @@
 import { carregarCenario } from "./Tela.js";
-import { setInimigo,startGame} from "./jsons/Jogo/Jogo.js"
+import { inimigo, setInimigo,startGame} from "./jsons/Jogo/Jogo.js"
 import { inimigos } from "./jsons/inimigos/Inimigos.js";
 export function criarFase(){
     console.log("main")
@@ -56,9 +56,13 @@ export function criarMapa(){
         h3.textContent = inimigos[i].nome
         moldura.appendChild(h3)
         moldura.classList.add("molduarPersonagem");
+
+        
         moldura.classList.add("a"+i);
      
         moldura.addEventListener("click", function(){
+           if(inimigos[i].derrotado == true){return}
+
             main.innerHTML = "";
             criarFase()
             setInimigo(inimigos[i])
@@ -66,7 +70,9 @@ export function criarMapa(){
             carregarCenario()
 
         })
-
+        if(inimigos[i].derrotado == true){
+            moldura.classList.add("fechada");
+        }
         centralizador.appendChild(moldura);
     }
 
