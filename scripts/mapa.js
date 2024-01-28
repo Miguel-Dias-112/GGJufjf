@@ -52,6 +52,9 @@ export function criarMapa(){
     centralizador.classList.add("centralizador")
     for (let i = 0; i <4; i++) {    
         const moldura = document.createElement("div");
+        let h3 = document.createElement("h3")
+        h3.textContent = inimigos[i].nome
+        moldura.appendChild(h3)
         moldura.classList.add("molduarPersonagem");
         moldura.classList.add("a"+i);
      
