@@ -36,9 +36,18 @@ function porCartaTela(cartas, missão){
             });
             descricaoCtn.textContent = descricao
             cartaContainer.classList.add('carta');
-            cartaContainer.appendChild(descricaoCtn);
+            cartaContainer.classList.add('subindo');
 
+
+            cartaContainer.appendChild(descricaoCtn);
             mesaCartas.appendChild(cartaContainer);
+
+            window.setTimeout(()=>{
+                cartaContainer.classList.remove('subindo')
+                       // 
+                cartaContainer.classList.add('nusada');
+
+            },500)
     }
     
     cartas.forEach(carta => {
@@ -86,7 +95,14 @@ export function atualizarValores(){
     barraJogador.value = jogador.vida;
 }
 
+export function animaCartasDescendo(){
+    let cartas = document.querySelectorAll(".carta")
+    cartas.forEach(carta => {
+        carta.classList.remove("nusada")
+        carta.classList.add("usada")
+    });
 
+}
 export function carregarCenario(){
     let main = document.querySelector("#main")
 
