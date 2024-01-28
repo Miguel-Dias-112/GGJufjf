@@ -132,7 +132,7 @@ export function carregarCenario(){
                
         for (let i = 0; i < 3; i++) {
             window.setTimeout(()=>{
-                inimigoCtn.style.backgroundImage = `url(${'../../../assets/'+nome+'/teste/s'+i+'.png'})`
+                inimigoCtn.style.backgroundImage = `url(${'../../../assets/'+nome+'/sprite/s'+i+'.png'})`
                 console.log(inimigo.sprite)
             },100*i)
         }
