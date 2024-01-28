@@ -1,55 +1,63 @@
 const CARTAS = [
     {
-        "descricao": "Piada sobre espancar Idosa",
-        "efetividade": ["Genz"],
-        "inefetivade": ["Idosa"]
-    },
-    {
-        "descricao": "Video de gatinho fofo engraçado",
-        "efetividade": ["Idosa"],
-        "inefetivade": ["Genz"]
-    },
-    {
-        "descricao": "Comentario sobre celebridade",
+        "descricao": "Mostrar vídeo engraçado de Gato",
         "efetividade": ["Idosa"],
         "inefetivade": [""]
     },
     {
-        "descricao": "Previsão do tempo",
+        "descricao": "Fazer piada sobre bater em Idosa",
+        "efetividade": [""],
+        "inefetivade": ["Idosa"]
+    },
+    {
+        "descricao": "Pedir pix p/ Larissa Manoela",
+        "efetividade": ["GenZ"],
+        "inefetivade": [""]
+    },
+    {
+        "descricao": "Oferecer presente misterioso",
+        "efetividade": [""],
+        "inefetivade": ["GenZ"]
+    },
+    {
+        "descricao": "Chamar p/ ver o programa da Xuxa",
+        "efetividade": ["Padre"],
+        "inefetivade": [""]
+    },
+    {
+        "descricao": "Pedir pra ir no show da Taylor Swift",
+        "efetividade": [""],
+        "inefetivade": ["Padre"]
+    },
+    {
+        "descricao": "Falar mal do Pt",
+        "efetividade": ["Militar"],
+        "inefetivade": [""]
+    },
+    {
+        "descricao": "Zoar o hino nacional",
+        "efetividade": [""],
+        "inefetivade": ["Militar"]
+    },
+    {
+        "descricao": "Conversar sobre o tempo",
         "efetividade": [""],
         "inefetivade": [""]
     },
     {
-        "descricao": "Gritar palavras aleatórias",
-        "efetividade": ["Genz"],
-        "inefetivade": ["Idosa"]
+        "descricao": "Fazer uma piada de tiozão",
+        "efetividade": [""],
+        "inefetivade": [""]
     },
     {
-        "descricao": "Recita bordão do Zorra Total",
-        "efetividade": ["Idosa", "Palhaço"],
-        "inefetivade": ["Genz", "Padre"]
+        "descricao": "Confessar meus pecados",
+        "efetividade": [""],
+        "inefetivade": [""]
     },
     {
-        "descricao": "Conta piada de cunho religioso",
-        "efetividade": ["Genz"],
-        "inefetivade": ["Idosa", "Padre", "Militar"]
-    },
-    {
-        "descricao": "Conta piada de cunho preconceituoso",
-        "efetividade": ["Idosa", "Militar"],
-        "inefetivade": ["Genz", "Padre"]
-    },
-    {
-        "descricao": "Faz referência a filmes de comédia antigos",
-        "efetividade": ["Idosa", "Hetero"],
-        "inefetivade": ["Genz"]
-    },
-    {
-        "descricao": "Faz referência a comediantes de stand-up",
-        "efetividade": ["Genz", "Hetero"],
-        "inefetivade": ["Idosa", "Padre"]
-    },
-    
-
+        "descricao": "Pedir pra dar drift de Monza",
+        "efetividade": [""],
+        "inefetivade": [""]
+    }
 ]
 export default CARTAS;

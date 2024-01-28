@@ -74,5 +74,10 @@ export function carregarCenario(){
     main.style.backgroundImage = `url(${inimigo.cenario})`
 
     let back = document.querySelector("#inimigo")
+    back.style.gridArea= inimigo.area.x1+'/'+inimigo.area.x2+'/'+inimigo.area.x3+'/'+inimigo.area.x4
+    console.log(inimigo.area)
     back.style.backgroundImage = `url(${inimigo.sprite})`
+
+
+    back.appendChild(div)
 }
