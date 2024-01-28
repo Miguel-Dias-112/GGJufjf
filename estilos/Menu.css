@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'anonimosPro';
+    src: url(../assets/AnonymousPro-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'Pixel';
+    src: url(../assets/Pixelation\(2\).ttf);
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'anonimosPro';
+    background-image: url('../assets/mapa2.png');
+}
+main{
+    top:calc(calc(50% - 45%) - 2.5px);
+    left:calc(calc(50% - 40%) - 5px);
+
+    height: 90%;
+    border-radius: 18px;
+    
+    border: 5px solid black;
+    aspect-ratio: 16/9;
+    background-color:wheat ;
+    
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+    z-index: 2;
+}
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    height: 120px;
+}
+main h1{
+    font-size: 50px;
+    font-family: 'Pixel';
+    margin: 0;
+    width: 500px;
+    text-align: center;
+    padding: 0;
+    color: black;
+
+}
+
+button{
+    width: 200px;
+    height: 60px;
+    background-color: #7b3715;
+    border: 5px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    color: wheat;
+    font-family: 'anonimosPro';
+     
+}

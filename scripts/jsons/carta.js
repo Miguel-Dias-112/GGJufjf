@@ -2,10 +2,10 @@ const CARTAS = [
     {
         "descricao": ["Ontem, eu vi um video de gatinho e descobri por que nao paro de ver : ele sao prr-feitos"],
         "efetividade": ["GenZ","Idosa"],
-        "inefetivade": ["Militar"]
+        "inefetivade": ["Militar", "Padre"]
     },
     {
-        "descricao": ["Fazer piada sobre bater em Idosa"],
+        "descricao": ["Sabe por que minha avó foi pro hospital no meu aniversário? Porque minha mãe mandou eu apagar a velhinha."],
         "efetividade": ["GenZ"],
         "inefetivade": ["Idosa","Militar","Padre"]
     },
@@ -15,14 +15,9 @@ const CARTAS = [
         "inefetivade": [""]
     },
     {
-        "descricao": ["Açao: Gravar video dando dinheiro ao mendigo e ganhar 10vezes mais dinheiro com a imagem dele"],
+        "descricao": ["Graças a Deus sou ateu"],
         "efetividade": ["GenZ"],
-        "inefetivade": ["Militar"]
-    },
-    {
-        "descricao": ["Lembra daqueles cara saudavam pneu? No 15/11 ..."],
-        "efetividade": ["GenZ"],
-        "inefetivade": ["Militar"]
+        "inefetivade": ["Padre", "Idosa"]
     },
     {
         "descricao": ["E o Paulo Kogos?"],
@@ -30,17 +25,17 @@ const CARTAS = [
         "inefetivade": ["Militar"]
     },
     {
-        "descricao": ["Qual a diferença entre um estudante universitário e um baseado? O baseado pelo menos tem um propósito na vida."],
+        "descricao": ["Qual a diferença entre um universitário e um baseado? O baseado pelo menos tem um propósito na vida."],
         "efetividade": ["Militar"],
         "inefetivade": ["GenZ"]
     },
     {
-        "descricao": ['Por que o hino nacional é o melhor remédio? Porque é especialista em fazer as pessoas dormirem!'],
+        "descricao": ["Sabe por que o tempo não gosta de piadas? Porque nunca está no clima!"],
         "efetividade": ["Idosa","Padre"],
         "inefetivade": ["GenZ"]
     },
     {
-        "descricao": ["Sabe o'que o Bolsonaro le? A mao..."],
+        "descricao": ["Sabe o'que o Bolsonaro lê? A mão..."],
         "efetividade": ["GenZ"],
         "inefetivade": ["Militar"]
     },
@@ -53,6 +48,26 @@ const CARTAS = [
         "descricao": ["Qual o contrário de Volátil? Resposta: Vem-cá-sobrinho"],
         "efetividade": ["Idosa","Padre"],
         "inefetivade": ["GenZ"]
+    },
+    {
+        "descricao": ["GELADEIRA🧊"],
+        "efetividade": ["GenZ"],
+        "inefetivade": [],
+    },
+    {
+        "descricao": ["Por que os Estados Unidos não jogam xadrez? Porque eles já perderam as duas torres"],
+        "efetividade": ["GenZ"],
+        "inefetivade": ["Idosa","Militar","Padre"],
+    },
+    {
+        "descricao": ["Eu não sou preconceituoso, preconceito é crime... E crime é coisa de carioca!"],
+        "efetividade": ["Militar"],
+        "inefetivade": ["Padre"],
+    },
+    {
+        "descricao": ["Dizem que sou cachaceiro, cachaceiro eu não sou... cachaceiro é quem fabrica a pinga, eu sou só consumidor!"],
+        "efetividade": ["Idosa"],
+        "inefetivade": ["Padre"],
     }
 ]
 export default CARTAS;

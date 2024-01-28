@@ -35,5 +35,6 @@
     text-decoration: none;
     border: 0px;
     font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 5px;
+    background-color: wheat;
 }

@@ -54,7 +54,11 @@
 }
 .molduarPersonagem:hover{
     animation: grow 0.5s ease-in-out alternate infinite;
-    animation-fill-mode: forwards;
+    background-image: url('../assets/cortina.gif');
+}
+
+.molduarPersonagem:{
+
 }
  .a1{
     grid-column: 1;
@@ -75,6 +79,7 @@
 
 @keyframes grow {
     0%{
+        
         transform: scale(1);
     }
     50%{
