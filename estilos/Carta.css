@@ -13,7 +13,9 @@
     border-bottom-left-radius: 15px;
     border-right: 5px solid black;
 
-    background: url('../assets/mapa2.png')
+    background: url('../assets/mapa2.png');
+    background-size: cover;
+    
 }
 #mesaCartas .carta{
     height: 70%;
@@ -23,7 +25,7 @@
     justify-content: center;
     align-items: center;
     color: black;
-
+    text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.418);
     font-size: large;
     padding: 10px;

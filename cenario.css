@@ -51,7 +51,7 @@ main{
 }
 
 #alegriaInimigo{
-    grid-area: 1/1/1/3;
+    grid-area: 1/1/1/5;
 
     width: 100%;
     height: 100%;
@@ -64,21 +64,30 @@ main{
 
 }
 #alegriaSua{
-    grid-area: 10/9/10/11;
+    grid-area: 9/9/11/11;
 
     width: 100%;
     height: 100%;
     top: 0px;
     border-radius: 15px;
-    background: orange ;
+    
     display: flex;
 ;   justify-content: center;
     align-items: center;
 }
 
 .vidaInimigo{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+.heart{
+    width: 50px;
+    height: 50px;
+    background-size:cover;
+
+    filter: drop-shadow(0px 0px  2px rgb(0, 0, 0))
+
 }

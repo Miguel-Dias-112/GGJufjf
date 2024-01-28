@@ -80,19 +80,14 @@ export function atualizarValores(){
         for (let i = 0; i < valor; i++) {
             const img = document.createElement('div');
             img.style.backgroundImage = path1
-            img.style.width='25px'
-            img.style.height='25px'
-            img.style.backgroundSize='cover'
-            img.innerText = '.';
+           
             img.classList.add('heart');
             barra.appendChild(img);
         }
         for (let i = 0; i < 10-valor; i++) {
             const img = document.createElement('div');
             img.style.backgroundImage = path2 
-            img.style.width='25px'
-            img.style.height='25px'
-            img.style.backgroundSize='cover'
+           
 
             img.classList.add('heart');
             barra.appendChild(img);

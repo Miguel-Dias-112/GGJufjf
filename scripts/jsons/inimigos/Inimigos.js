@@ -38,7 +38,7 @@ function criarInimigo(nome,fala,area){
 
  const Idosa = criarInimigo('Idosa',[criarFala("Muito bom!",0),criarFala("Não entendi",1),criarFala("Você vai pro inferno, meu filho",2)],{x1:6,x2:6,x3:8,x4:8})
 
- const GerZ = criarInimigo('GenZ',[criarFala("Aí sim heim, de ladinho é muito poggers!! ",0),criarFala("Kkkk as ideia",1),criarFala("Porra cringe essa piada ai",2)],{x1:6,x2:8,x3:0,x4:0})
+ const GerZ = criarInimigo('GenZ',[criarFala("Aí sim heim, de ladinho é muito poggers!! ",0),criarFala("Kkkk as ideia",1),criarFala("Porra cringe essa piada ai",2)],{x1:6,x2:8,x3:7,x4:0})
 
  const Militar = criarInimigo('Militar',[criarFala("HAHAHA BRASIL!!",0),criarFala("Mais uma dessas e ",1),criarFala("Que isso, seu bizonho?",2)],{x1:6,x2:8,x3:0,x4:0})
 
