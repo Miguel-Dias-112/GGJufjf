@@ -6,13 +6,20 @@ export function criarFase(){
     let main = document.createElement('main')
     main.id='main'
 
-    let centralizador = document.createElement('div')
 
+    
     let vidainimigo = document.createElement("div")
     vidainimigo.id="alegriaInimigo"
+
     let progressInimigo= document.createElement("progress")
     progressInimigo.id="progressoAlegriaInimigo"
+    const heartContainer = document.createElement('div');
+    heartContainer.classList.add("heartContainer");
+    heartContainer.id="heartContainerInimigo";
+
+
     vidainimigo.appendChild(progressInimigo)
+    vidainimigo.appendChild(heartContainer)
     main.appendChild(vidainimigo)
 
     let vidaSua = document.createElement("div")
@@ -30,7 +37,6 @@ export function criarFase(){
     main.appendChild(mesa)
     main.appendChild(inimigo)
 
-    main.appendChild(centralizador)
     progressSeu.value=10
     progressSeu.max=10
     progressInimigo.value=0
@@ -49,6 +55,9 @@ export function criarMapa(){
 
     var mapa = document.createElement("div");   
     mapa.classList.add("mapa");
+
+    let centralizador = document.createElement('div')
+    centralizador.classList.add("centralizador")
     for (let i = 0; i <4; i++) {    
         const moldura = document.createElement("div");
         moldura.classList.add("molduarPersonagem");
@@ -65,10 +74,10 @@ export function criarMapa(){
 
         })
 
-        mapa.appendChild(moldura);
+        centralizador.appendChild(moldura);
     }
 
-      
+    mapa.appendChild(centralizador);
     document.body.appendChild(mapa);
 
     console.log("mapa criado");

@@ -62,8 +62,27 @@ export function atualizarValores(){
     
     const barraJogador = document.querySelector('#progressoAlegriaSua');
     const barraInimigo = document.querySelector('#progressoAlegriaInimigo');
+    const heartContainerInimigo = document.querySelector('#heartContainerInimigo');
  
     barraInimigo.value = inimigo.graca;
+    heartContainerInimigo.innerHTML = '';
+    for (let i = 0; i < 10-inimigo.graca; i++) {
+        const heart = document.createElement('div');
+
+
+        heart.innerText = '😉';
+        heart.classList.add('heart');
+        heartContainerInimigo.appendChild(heart);
+    }
+    for (let i = 0; i < inimigo.graca; i++) {
+        const heart = document.createElement('div');
+
+
+        heart.innerText = '😊';
+        heart.classList.add('heart');
+        heartContainerInimigo.appendChild(heart);
+    }
+
     barraJogador.value = jogador.vida;
 }
 
@@ -79,5 +98,5 @@ export function carregarCenario(){
     back.style.backgroundImage = `url(${inimigo.sprite})`
 
 
-    back.appendChild(div)
+    //FIXME back.appendChild(div)
 }
