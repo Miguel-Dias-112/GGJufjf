@@ -18,6 +18,7 @@ function criarFala(texto,dano){
 function criarInimigo(nome,fala,area,bottom){
     let inimigo = {}
     inimigo.graca = 0
+    inimigo.frame = 0
     inimigo.cenario='../../../assets/'+nome+'/fundo.png'
     inimigo.sprite='../../../assets/'+nome+'/sprite.png'
     
@@ -44,9 +45,9 @@ function criarInimigo(nome,fala,area,bottom){
     return inimigo;
 }
 
- const Idosa = criarInimigo('Idosa',[criarFala("Muito bom!",0),criarFala("Não entendi",1),criarFala("Você vai pro inferno, meu filho",2)],{x1:6,x2:6,x3:8,x4:8},80)
+ const Idosa = criarInimigo('Idosa',[criarFala("Muito bom, meu filho!",0),criarFala("Não entendi",1),criarFala("Você vai pro inferno, meu filho",2)],{x1:6,x2:6,x3:8,x4:8},80)
 
- const GerZ = criarInimigo('GenZ',[criarFala("Aí sim heim, de ladinho é muito poggers!! ",0),criarFala("Kkkk as ideia",1),criarFala("Porra cringe essa piada ai",2)],{x1:6,x2:8,x3:7,x4:0},120)
+ const GerZ = criarInimigo('GenZ',[criarFala("Aí sim heim, piada muito poggers!! ",0),criarFala("Kkkk as ideia",1),criarFala("Porra cringe essa piada ai",2)],{x1:6,x2:8,x3:7,x4:0},120)
 
  const Militar = criarInimigo('Militar',[criarFala("HAHAHA BRASIL!!",0),criarFala("Era melhor ta servindo a patria brasileira meu jovem...",1),criarFala("Que isso, seu bizonho?",2)],{x1:6,x2:8,x3:0,x4:0},100)
 

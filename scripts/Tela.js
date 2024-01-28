@@ -4,6 +4,7 @@ import CARTAS from './jsons/carta.js'
 import { getJogador, setVida } from './Jogador.js';
 import { cicloJogo,inimigo    } from './jsons/Jogo/Jogo.js';
 import { criarMapa } from './mapa.js';
+import { pararAudio } from './Sons.js';
 
 function randomNumberInterval(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a
@@ -103,9 +104,9 @@ export function atualizarValores(){
 
     preencherBarra(barraJogador, jogador.vida,'URL(../assets/coração.png)','URL(../assets/coraçãoVazio.png)');
 
-    let foto1="https://w7.pngwing.com/pngs/314/114/png-transparent-laughing-emoji.png"    
-    let foto2="https://img.freepik.com/vetores-premium/cara-de-choro-de-desenho-animado-com-emoji-de-choro-de-olhos-molhados_8071-15357.jpg"
-    preencherBarra(barra, inimigo.graca,'URL('+foto1+')','URL('+foto2+')');
+
+    
+    preencherBarra(barra, inimigo.graca,'URL(../assets/feliz.png)','URL(../assets/vazio.png)');
   
 }
 
@@ -124,20 +125,22 @@ export function carregarCenario(){
 
     let inimigoCtn = document.querySelector("#inimigo")
     inimigoCtn.style.gridArea= inimigo.area.x1+'/'+inimigo.area.x2+'/'+inimigo.area.x3+'/'+inimigo.area.x4
+    inimigoCtn.dataset.frame = inimigo.frame
+    inimigoCtn.classList.add(inimigo.nome);
 
     let nome = inimigo.nome
+    if (!inimigo.heartbeat) {
+        inimigo.heartbeat = setInterval(() => {
+            console.log(inimigo.frame);
+            inimigo.frame = inimigo.frame >=3 ? 0 : inimigo.frame+1;
+            inimigoCtn.dataset.frame = inimigo.frame
+        }, 150);
 
+    }else{
+        clearInterval(inimigo.heartbeat)
+        inimigo.heartbeat = null
+    }
 
-    window.setInterval(() => {
-               
-        for (let i = 0; i < 3; i++) {
-            window.setTimeout(()=>{
-                inimigoCtn.style.backgroundImage = `url(${'../../../assets/'+nome+'/sprite/s'+i+'.png'})`
-                console.log(inimigo.sprite)
-            },100*i)
-        }
-
-    }, 100*3);
   
 
     //FIXME back.appendChild(div)
@@ -166,21 +169,29 @@ export function imprimeResultado( resultado){
 
     let div= document.createElement('div')
     div.classList.add('resultado')
+    if (resultado == 'Vitoria'){
+        let h1 = document.createElement('h1')
+        h1.textContent= "Muito bem!";
+        let button=document.createElement('button')
 
-    let h1 = document.createElement('h1')
-    let button=document.createElement('button')
-    
-    button.textContent="voltar"
-    button.onclick=()=>{
+        button.textContent="Menu"
+        button.onclick=()=>{
+        pararAudio()
         criarMapa()
         setVida(10)
+        }    
+        div.appendChild(button)
+        div.appendChild(h1)
+        main.appendChild(div)
+        return;
     }
+    let h1 = document.createElement('h1')
+    h1.textContent= "Esperava mais!";
+    let button=document.createElement('button')
 
-
-    h1.textContent= resultado;
-h1.textContent='Vitoria'
+    button.textContent="Reiniciar"
+    button.addEventListener('click', location.reload);
     div.appendChild(button)
     div.appendChild(h1)
-    main.appendChild(div)
-
-}
+    main.appendChild(div);
+   }
