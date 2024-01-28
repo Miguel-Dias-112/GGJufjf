@@ -131,7 +131,6 @@ export function carregarCenario(){
     let nome = inimigo.nome
     if (!inimigo.heartbeat) {
         inimigo.heartbeat = setInterval(() => {
-            console.log(inimigo.frame);
             inimigo.frame = inimigo.frame >=3 ? 0 : inimigo.frame+1;
             inimigoCtn.dataset.frame = inimigo.frame
         }, 150);
