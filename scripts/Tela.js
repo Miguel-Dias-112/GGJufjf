@@ -69,30 +69,43 @@ export function PorDecknaTela(){
 export function atualizarValores(){
     const jogador = getJogador();
     
-    const barraJogador = document.querySelector('#progressoAlegriaSua');
-    const barraInimigo = document.querySelector('#progressoAlegriaInimigo');
-    const heartContainerInimigo = document.querySelector('#heartContainerInimigo');
- 
-    barraInimigo.value = inimigo.graca;
-    heartContainerInimigo.innerHTML = '';
-    for (let i = 0; i < 10-inimigo.graca; i++) {
-        const heart = document.createElement('div');
+    const barraJogador = document.querySelector('#vidaJogador');
 
+    
+    
+    const barra = document.querySelector('#vidaInimigo');
 
-        heart.innerText = '😉';
-        heart.classList.add('heart');
-        heartContainerInimigo.appendChild(heart);
+    function preencherBarra(barra, valor, path1,path2){
+        barra.innerHTML = '';
+        for (let i = 0; i < valor; i++) {
+            const img = document.createElement('div');
+            img.style.backgroundImage = path1
+            img.style.width='25px'
+            img.style.height='25px'
+            img.style.backgroundSize='cover'
+            img.innerText = '.';
+            img.classList.add('heart');
+            barra.appendChild(img);
+        }
+        for (let i = 0; i < 10-valor; i++) {
+            const img = document.createElement('div');
+            img.style.backgroundImage = path2 
+            img.style.width='25px'
+            img.style.height='25px'
+            img.style.backgroundSize='cover'
+
+            img.classList.add('heart');
+            barra.appendChild(img);
+        }
+        
     }
-    for (let i = 0; i < inimigo.graca; i++) {
-        const heart = document.createElement('div');
 
+    preencherBarra(barraJogador, jogador.vida,'URL(../assets/coração.png)','URL(../assets/coraçãoVazio.png)');
 
-        heart.innerText = '😊';
-        heart.classList.add('heart');
-        heartContainerInimigo.appendChild(heart);
-    }
-
-    barraJogador.value = jogador.vida;
+    let foto1="https://w7.pngwing.com/pngs/314/114/png-transparent-laughing-emoji.png"    
+    let foto2="https://img.freepik.com/vetores-premium/cara-de-choro-de-desenho-animado-com-emoji-de-choro-de-olhos-molhados_8071-15357.jpg"
+    preencherBarra(barra, inimigo.graca,'URL('+foto1+')','URL('+foto2+')');
+  
 }
 
 export function animaCartasDescendo(){

@@ -8,26 +8,24 @@ export function criarFase(){
 
 
     
-    let vidainimigo = document.createElement("div")
-    vidainimigo.id="alegriaInimigo"
+    let vidainimigoCtn = document.createElement("div")
+    vidainimigoCtn.id="alegriaInimigo"
 
-    let progressInimigo= document.createElement("progress")
-    progressInimigo.id="progressoAlegriaInimigo"
-    const heartContainer = document.createElement('div');
-    heartContainer.classList.add("heartContainer");
-    heartContainer.id="heartContainerInimigo";
+    const vidaInimigo = document.createElement('div');
+    vidaInimigo.classList.add("vidaInimigo");
+    vidaInimigo.id="vidaInimigo";
+    vidainimigoCtn.appendChild(vidaInimigo)
+    main.appendChild(vidainimigoCtn)
 
+    let vidaSuaCtn = document.createElement("div")
+    vidaSuaCtn.id="alegriaSua"
 
-    vidainimigo.appendChild(progressInimigo)
-    vidainimigo.appendChild(heartContainer)
-    main.appendChild(vidainimigo)
+    let vidaJogador= document.createElement("div")
+    vidaJogador.classList.add("vidaInimigo");
+    vidaJogador.id="vidaJogador";
+    vidaSuaCtn.appendChild(vidaJogador)
 
-    let vidaSua = document.createElement("div")
-    vidaSua.id="alegriaSua"
-    let progressSeu= document.createElement("progress")
-    progressSeu.id="progressoAlegriaSua"
-    vidaSua.appendChild(progressSeu)
-    main.appendChild(vidaSua)
+    main.appendChild(vidaSuaCtn)
 
     let mesa = document.createElement('div')
     let inimigo = document.createElement('div')
@@ -37,13 +35,7 @@ export function criarFase(){
     main.appendChild(mesa)
     main.appendChild(inimigo)
 
-    progressSeu.value=10
-    progressSeu.max=10
-    progressInimigo.value=0
-    progressInimigo.max=10
-
-    progressInimigo.min=0
-    progressSeu.min=0
+    
     document.body.appendChild(main)
     
 
