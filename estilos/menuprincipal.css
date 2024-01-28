@@ -1,1 +1,32 @@
-di
+main{
+    top:calc(calc(50% - 45%) - 2.5px);
+    left:calc(calc(50% - 40%) - 5px);
+
+    height: 90%;
+    border-radius: 18px;
+    
+    border: 5px solid black;
+    aspect-ratio: 16/9;
+    background-color:whitesmoke ;
+    
+    background-image: url('../assets/mapa2.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+button{
+    width: 40vh;
+    height: 5vh;
+     
+}
