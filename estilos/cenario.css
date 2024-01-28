@@ -1,3 +1,8 @@
+@font-face {
+    font-family: anonimosPro;
+    src: url(./assets/AnonymousPro-Regular.ttf);
+  }
+
 body{
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,7 +14,8 @@ body{
     align-items: center;
     height: 100vh;
     width: 100vw;
-
+overflow: hidden;
+    font-family: anonimosPro;
     
 }
 main{
@@ -34,10 +40,11 @@ main{
 
 
 #inimigo{
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
+
     grid-area: 7/6
                 /9/8;
    
@@ -47,12 +54,22 @@ main{
     background-image: url('./assets/Idosa/Idosa1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    filter: drop-shadow(0px 0px  10px rgba(0,0,0,1))
-}
+    filter: drop-shadow(0px 0px  10px rgba(0,0,0,1));
+    
 
+    
+}
+#inimigo h3{
+    position: relative;
+    bottom: 80px;
+
+    padding: 20px;
+    color: black;
+    border: 5px solid black;
+    background-color: wheat;
+}
 #alegriaInimigo{
     grid-area: 1/1/1/5;
-
     width: 100%;
     height: 100%;
     top: 0px;
@@ -78,16 +95,33 @@ main{
 
 .vidaInimigo{
     position: relative;
+    width: 100%;
+    height: 100%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
+.vidaInimigo .heart{
+    width: 10%;
+}
+.vidaJogador{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
 .heart{
-    width: 50px;
-    height: 50px;
+    width: 20%;
+    aspect-ratio: 1/1;
     background-size:cover;
-
     filter: drop-shadow(0px 0px  2px rgb(0, 0, 0))
 
 }

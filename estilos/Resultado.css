@@ -1,0 +1,26 @@
+.resultado{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+ 
+    
+    backdrop-filter:blur(10px) grayscale(10%) ;
+  
+  background: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado button{
+    width: 150px;
+    height: 80px;
+    opacity: 1;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    
+}

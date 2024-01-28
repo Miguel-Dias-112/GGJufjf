@@ -2,7 +2,7 @@
     top:calc(calc(50% - 45%) - 2.5px);
     left:calc(calc(50% - 40%) - 5px);
 
-    width: 80%;
+    height: 90%;
     border-radius: 18px;
 
     border: 5px solid black;

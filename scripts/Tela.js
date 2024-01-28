@@ -1,8 +1,10 @@
 
 import {pegarCarta} from './Carta.js';
 import CARTAS from './jsons/carta.js'
-import { getJogador } from './Jogador.js';
+import { getJogador, setVida } from './Jogador.js';
 import { cicloJogo,inimigo    } from './jsons/Jogo/Jogo.js';
+import { criarMapa } from './mapa.js';
+
 function randomNumberInterval(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a
 }
@@ -34,7 +36,11 @@ function porCartaTela(cartas, missão){
                 //////CICLO JOGO
                 cicloJogo(carta);
             });
-            descricaoCtn.textContent = descricao
+           // carta.dados.descricao = carta.dados.descricao[randomNumberInterval(0,carta.dados.descricao.length-1)]
+
+            let desc = carta.dados.descricao[randomNumberInterval(0,carta.dados.descricao.length-1)]
+            descricaoCtn.textContent = desc
+            
             cartaContainer.classList.add('carta');
             cartaContainer.classList.add('subindo');
 
@@ -116,11 +122,53 @@ export function carregarCenario(){
 
     main.style.backgroundImage = `url(${inimigo.cenario})`
 
-    let back = document.querySelector("#inimigo")
-    back.style.gridArea= inimigo.area.x1+'/'+inimigo.area.x2+'/'+inimigo.area.x3+'/'+inimigo.area.x4
+    let inimigoCtn = document.querySelector("#inimigo")
+    inimigoCtn.style.gridArea= inimigo.area.x1+'/'+inimigo.area.x2+'/'+inimigo.area.x3+'/'+inimigo.area.x4
     console.log(inimigo.area)
-    back.style.backgroundImage = `url(${inimigo.sprite})`
-
-
+    inimigoCtn.style.backgroundImage = `url(${inimigo.sprite})`
     //FIXME back.appendChild(div)
+}
+
+export function mostrarFrase(texto){
+    const altura = inimigo.bottom
+
+    let inimigoCtn = document.querySelector("#inimigo")
+    inimigoCtn.innerHTML=''
+    
+    let frase = document.createElement('h3')
+    console.log(altura)
+    frase.style.bottom=altura+'px'
+
+    frase.textContent=texto
+    inimigoCtn.appendChild(frase)
+
+    window.setTimeout(()=>{ 
+        inimigoCtn.removeChild(frase)
+    },1000)
+}
+
+export function imprimeResultado( resultado){
+    let main = document.querySelector("#main")
+
+    let div= document.createElement('div')
+    div.classList.add('resultado')
+
+    let h3 = document.createElement('h3')
+    let button=document.createElement('button')
+    
+    button.textContent="voltar"
+    button.onclick=()=>{
+        criarMapa()
+        setVida(10)
+        
+
+    }
+
+
+    h3.textContent= resultado;
+
+    div.appendChild(button)
+    div.appendChild(h3)
+    main.appendChild(div)
+
 }

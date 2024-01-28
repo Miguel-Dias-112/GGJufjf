@@ -1,4 +1,5 @@
 import CARTAS from './jsons/carta.js' 
+import { randomNumberInterval } from './jsons/inimigos/Inimigos.js'
 
 export function pegarCarta(index){
     const carta ={}
@@ -6,6 +7,7 @@ export function pegarCarta(index){
 
  
     carta.dados = CARTAS[index]
+    
     carta.cartaContainer = document.createElement('div');
 
     carta.ataque =  function (inimigo){

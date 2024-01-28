@@ -18,3 +18,6 @@ export function getJogador(){
     return jogador;
 
 }
+export function setVida(vida){
+    jogador.vida=vida
+}

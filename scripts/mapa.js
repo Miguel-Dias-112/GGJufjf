@@ -21,7 +21,7 @@ export function criarFase(){
     vidaSuaCtn.id="alegriaSua"
 
     let vidaJogador= document.createElement("div")
-    vidaJogador.classList.add("vidaInimigo");
+    vidaJogador.classList.add("vidaJogador");
     vidaJogador.id="vidaJogador";
     vidaSuaCtn.appendChild(vidaJogador)
 
@@ -62,8 +62,6 @@ export function criarMapa(){
             main.innerHTML = "";
             criarFase()
             setInimigo(inimigos[i])
-
-            console.log(inimigos[i])    
             startGame()
             carregarCenario()
 
