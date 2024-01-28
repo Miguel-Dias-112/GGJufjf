@@ -142,35 +142,35 @@ main{
 }
 
 #inimigo.GenZ {
-    background-image: url("./assets/GenZ/sprite/s0.png");
+    background-image: url(".../assets/GenZ/sprite/s0.png");
 }
 
 #inimigo.GenZ[data-frame="1"] {
-    background-image: url("./assets/GenZ/sprite/s1.png");
+    background-image: url("../assets/GenZ/sprite/s1.png");
 }
 
 #inimigo.GenZ[data-frame="2"] {
-    background-image: url("./assets/GenZ/sprite/s2.png");
+    background-image: url("../assets/GenZ/sprite/s2.png");
 }
 
 #inimigo.GenZ[data-frame="3"] {
-    background-image: url("./assets/GenZ/sprite/s3.png");
+    background-image: url("../assets/GenZ/sprite/s3.png");
 }
 
 #inimigo.Militar {
-    background-image: url("./assets/Militar/sprite/s0.png");
+    background-image: url("../assets/Militar/sprite/s0.png");
 }
 
 #inimigo.Militar[data-frame="1"] {
-    background-image: url("./assets/Militar/sprite/s1.png");
+    background-image: url("../assets/Militar/sprite/s1.png");
 }
 
 #inimigo.Militar[data-frame="2"] {
-    background-image: url("./assets/Militar/sprite/s2.png");
+    background-image: url("../assets/Militar/sprite/s2.png");
 }
 
 #inimigo.Militar[data-frame="3"] {
-    background-image: url("./assets/Militar/sprite/s3.png");
+    background-image: url("../assets/Militar/sprite/s3.png");
 }
 
 
