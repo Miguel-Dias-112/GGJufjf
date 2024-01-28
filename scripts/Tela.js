@@ -102,11 +102,11 @@ export function atualizarValores(){
         
     }
 
-    preencherBarra(barraJogador, jogador.vida,'URL(./../assets/coração.png)','URL(./../assets/coraçãoVazio.png)');
+    preencherBarra(barraJogador, jogador.vida,'URL(./assets/coração.png)','URL(./assets/coraçãoVazio.png)');
 
 
     
-    preencherBarra(barra, inimigo.graca,'URL(../assets/feliz.png)','URL(../assets/vazio.png)');
+    preencherBarra(barra, inimigo.graca,'URL(./assets/feliz.png)','URL(./assets/vazio.png)');
   
 }
 
@@ -121,7 +121,7 @@ export function animaCartasDescendo(){
 export function carregarCenario(){
     let main = document.querySelector("#main")
 
-    main.style.backgroundImage = `url(${inimigo.cenario})`
+    main.style.backgroundImage = `url(./${inimigo.cenario})`
 
     let inimigoCtn = document.querySelector("#inimigo")
     inimigoCtn.style.gridArea= inimigo.area.x1+'/'+inimigo.area.x2+'/'+inimigo.area.x3+'/'+inimigo.area.x4
@@ -131,6 +131,7 @@ export function carregarCenario(){
     let nome = inimigo.nome
     if (!inimigo.heartbeat) {
         inimigo.heartbeat = setInterval(() => {
+            console.log(inimigo.frame);
             inimigo.frame = inimigo.frame >=3 ? 0 : inimigo.frame+1;
             inimigoCtn.dataset.frame = inimigo.frame
         }, 150);

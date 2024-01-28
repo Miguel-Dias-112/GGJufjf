@@ -142,68 +142,68 @@ main{
 }
 
 #inimigo.GenZ {
-    background-image: url("../../../assets/GenZ/sprite/s0.png");
+    background-image: url("./assets/GenZ/sprite/s0.png");
 }
 
 #inimigo.GenZ[data-frame="1"] {
-    background-image: url("../../../assets/GenZ/sprite/s1.png");
+    background-image: url("./assets/GenZ/sprite/s1.png");
 }
 
 #inimigo.GenZ[data-frame="2"] {
-    background-image: url("../../../assets/GenZ/sprite/s2.png");
+    background-image: url("./assets/GenZ/sprite/s2.png");
 }
 
 #inimigo.GenZ[data-frame="3"] {
-    background-image: url("../../../assets/GenZ/sprite/s3.png");
+    background-image: url("./assets/GenZ/sprite/s3.png");
 }
 
 #inimigo.Militar {
-    background-image: url("../../../assets/Militar/sprite/s0.png");
+    background-image: url("./assets/Militar/sprite/s0.png");
 }
 
 #inimigo.Militar[data-frame="1"] {
-    background-image: url("../../../assets/Militar/sprite/s1.png");
+    background-image: url("./assets/Militar/sprite/s1.png");
 }
 
 #inimigo.Militar[data-frame="2"] {
-    background-image: url("../../../assets/Militar/sprite/s2.png");
+    background-image: url("./assets/Militar/sprite/s2.png");
 }
 
 #inimigo.Militar[data-frame="3"] {
-    background-image: url("../../../assets/Militar/sprite/s3.png");
+    background-image: url("./assets/Militar/sprite/s3.png");
 }
 
 
 #inimigo.Padre {
-    background-image: url("../../../assets/Padre/sprite/s0.png");
+    background-image: url("./assets/Padre/sprite/s0.png");
 }
 
 #inimigo.Padre[data-frame="1"] {
-    background-image: url("../../../assets/Padre/sprite/s1.png");
+    background-image: url("./assets/Padre/sprite/s1.png");
 }
 
 #inimigo.Padre[data-frame="2"] {
-    background-image: url("../../../assets/Padre/sprite/s2.png");
+    background-image: url("./assets/Padre/sprite/s2.png");
 }
 
 #inimigo.Padre[data-frame="3"] {
-    background-image: url("../../../assets/Padre/sprite/s3.png");
+    background-image: url("./assets/Padre/sprite/s3.png");
 }
 
 #inimigo.Idosa {
-    background-image: url("../../../assets/Idosa/sprite/s0.png");
+    background-image: url("./assets/Idosa/sprite/s0.png");
 }
 
 #inimigo.Idosa[data-frame="1"] {
-    background-image: url("../../../assets/Idosa/sprite/s1.png");
+    background-image: url("./assets/Idosa/sprite/s1.png");
 }
 
 #inimigo.Idosa[data-frame="2"] {
-    background-image: url("../../../assets/Idosa/sprite/s2.png");
+    background-image: url("./assets/Idosa/sprite/s2.png");
 }
 
 #inimigo.Idosa[data-frame="3"] {
-    background-image: url("../../../assets/Idosa/sprite/s3.png");
+    background-image: url("./assets/Idosa/sprite/s3.png");
 }
 
 
