@@ -6,21 +6,26 @@ export function criarFase(){
     let main = document.createElement('main')
     main.id='main'
 
-    let centralizador = document.createElement('div')
 
-    let vidainimigo = document.createElement("div")
-    vidainimigo.id="alegriaInimigo"
-    let progressInimigo= document.createElement("progress")
-    progressInimigo.id="progressoAlegriaInimigo"
-    vidainimigo.appendChild(progressInimigo)
-    main.appendChild(vidainimigo)
+    
+    let vidainimigoCtn = document.createElement("div")
+    vidainimigoCtn.id="alegriaInimigo"
 
-    let vidaSua = document.createElement("div")
-    vidaSua.id="alegriaSua"
-    let progressSeu= document.createElement("progress")
-    progressSeu.id="progressoAlegriaSua"
-    vidaSua.appendChild(progressSeu)
-    main.appendChild(vidaSua)
+    const vidaInimigo = document.createElement('div');
+    vidaInimigo.classList.add("vidaInimigo");
+    vidaInimigo.id="vidaInimigo";
+    vidainimigoCtn.appendChild(vidaInimigo)
+    main.appendChild(vidainimigoCtn)
+
+    let vidaSuaCtn = document.createElement("div")
+    vidaSuaCtn.id="alegriaSua"
+
+    let vidaJogador= document.createElement("div")
+    vidaJogador.classList.add("vidaInimigo");
+    vidaJogador.id="vidaJogador";
+    vidaSuaCtn.appendChild(vidaJogador)
+
+    main.appendChild(vidaSuaCtn)
 
     let mesa = document.createElement('div')
     let inimigo = document.createElement('div')
@@ -30,14 +35,7 @@ export function criarFase(){
     main.appendChild(mesa)
     main.appendChild(inimigo)
 
-    main.appendChild(centralizador)
-    progressSeu.value=10
-    progressSeu.max=10
-    progressInimigo.value=0
-    progressInimigo.max=10
-
-    progressInimigo.min=0
-    progressSeu.min=0
+    
     document.body.appendChild(main)
     
 
@@ -49,6 +47,9 @@ export function criarMapa(){
 
     var mapa = document.createElement("div");   
     mapa.classList.add("mapa");
+
+    let centralizador = document.createElement('div')
+    centralizador.classList.add("centralizador")
     for (let i = 0; i <4; i++) {    
         const moldura = document.createElement("div");
         moldura.classList.add("molduarPersonagem");
@@ -65,10 +66,10 @@ export function criarMapa(){
 
         })
 
-        mapa.appendChild(moldura);
+        centralizador.appendChild(moldura);
     }
 
-      
+    mapa.appendChild(centralizador);
     document.body.appendChild(mapa);
 
     console.log("mapa criado");

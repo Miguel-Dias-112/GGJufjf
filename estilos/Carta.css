@@ -3,23 +3,67 @@
     grid-area: 8/1/11/6;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
 
+    border-top: 5px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-right: 5px solid black;
+
+    background: url('../assets/mapa2.png');
+    background-size: cover;
+    
 }
 #mesaCartas .carta{
-    height: 50%;
+    height: 70%;
     aspect-ratio: 1/1;
-    background-color: whitesmoke;
+    background-color: wheat;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    box-shadow: 5px 5px 15px black;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.418);
     font-size: large;
     padding: 10px;
 }
+.subindo{
+    animation: goOut 0.5s ease-in-out reverse;
+}
+.usada{
+    animation: goOut 0.5s ease-in-out alternate;
+    animation-fill-mode: forwards;
+}
+.usada :hover{
+    
+}
+#mesaCartas .nusada:hover{
+    animation: grow 0.5s ease-in-out alternate infinite;
+    animation-fill-mode: forwards;
+}
 
+@keyframes goOut {
+    0%{
+        transform:  translate(0px,0px);
+    }
+    
+    100%{
+        transform:  translate(0px,300%);
+    }
+
+}
+
+@keyframes grow {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.01);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

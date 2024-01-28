@@ -36,9 +36,18 @@ function porCartaTela(cartas, missão){
             });
             descricaoCtn.textContent = descricao
             cartaContainer.classList.add('carta');
-            cartaContainer.appendChild(descricaoCtn);
+            cartaContainer.classList.add('subindo');
 
+
+            cartaContainer.appendChild(descricaoCtn);
             mesaCartas.appendChild(cartaContainer);
+
+            window.setTimeout(()=>{
+                cartaContainer.classList.remove('subindo')
+                       // 
+                cartaContainer.classList.add('nusada');
+
+            },500)
     }
     
     cartas.forEach(carta => {
@@ -60,14 +69,48 @@ export function PorDecknaTela(){
 export function atualizarValores(){
     const jogador = getJogador();
     
-    const barraJogador = document.querySelector('#progressoAlegriaSua');
-    const barraInimigo = document.querySelector('#progressoAlegriaInimigo');
- 
-    barraInimigo.value = inimigo.graca;
-    barraJogador.value = jogador.vida;
+    const barraJogador = document.querySelector('#vidaJogador');
+
+    
+    
+    const barra = document.querySelector('#vidaInimigo');
+
+    function preencherBarra(barra, valor, path1,path2){
+        barra.innerHTML = '';
+        for (let i = 0; i < valor; i++) {
+            const img = document.createElement('div');
+            img.style.backgroundImage = path1
+           
+            img.classList.add('heart');
+            barra.appendChild(img);
+        }
+        for (let i = 0; i < 10-valor; i++) {
+            const img = document.createElement('div');
+            img.style.backgroundImage = path2 
+           
+
+            img.classList.add('heart');
+            barra.appendChild(img);
+        }
+        
+    }
+
+    preencherBarra(barraJogador, jogador.vida,'URL(../assets/coração.png)','URL(../assets/coraçãoVazio.png)');
+
+    let foto1="https://w7.pngwing.com/pngs/314/114/png-transparent-laughing-emoji.png"    
+    let foto2="https://img.freepik.com/vetores-premium/cara-de-choro-de-desenho-animado-com-emoji-de-choro-de-olhos-molhados_8071-15357.jpg"
+    preencherBarra(barra, inimigo.graca,'URL('+foto1+')','URL('+foto2+')');
+  
 }
 
+export function animaCartasDescendo(){
+    let cartas = document.querySelectorAll(".carta")
+    cartas.forEach(carta => {
+        carta.classList.remove("nusada")
+        carta.classList.add("usada")
+    });
 
+}
 export function carregarCenario(){
     let main = document.querySelector("#main")
 
@@ -79,5 +122,5 @@ export function carregarCenario(){
     back.style.backgroundImage = `url(${inimigo.sprite})`
 
 
-    back.appendChild(div)
+    //FIXME back.appendChild(div)
 }

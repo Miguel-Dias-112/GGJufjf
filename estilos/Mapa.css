@@ -8,42 +8,67 @@
     border: 5px solid black;
     aspect-ratio: 16/9;
     background-color:whitesmoke ;
-
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(8,1fr);
-
+    
+    background-image: url('../assets/mapa2.png');
+    background-size: cover;
+    display: flex;
     justify-content: center;
     justify-items: center;
-    align-content: center;
-    align-items: center;
+
+
     z-index: 2;
 }
-
+.centralizador{
+    width: 50%;
+    aspect-ratio: 1/1;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
 .molduarPersonagem{
 
-    height: 80%;
+    height: 50%;
+    z-index: 5;
    aspect-ratio: 1/1;
-   margin-top: 200px;
     border-radius: 5px;
-    background-color: red;
+    background: #7b3715;
     background-image: url('../assets/cortina/cortina2.png');
     background-repeat: no-repeat;
     background-size: cover; 
+    filter: drop-shadow(0px 0px  10px rgba(0,0,0,1));
 }   
+.molduarPersonagem:hover{
+    animation: grow 0.5s ease-in-out alternate infinite;
+    animation-fill-mode: forwards;
+}
  .a1{
-    grid-column: 5;
-    grid-row: 5;
+    grid-column: 1;
+    grid-row: 1;
 }
 .a2{
-    grid-column: 4;
-    grid-row: 5;
+    grid-column: 1;
+    grid-row: 2;
 }
 .a3{
-    grid-column: 5;
-    grid-row: 4;
+    grid-column: 2;
+    grid-row: 1;
 }
 .a0{
-    grid-column: 4;
-    grid-row: 4;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@keyframes grow {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
