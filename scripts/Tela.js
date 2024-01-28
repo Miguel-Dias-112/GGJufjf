@@ -124,9 +124,10 @@ export function carregarCenario(){
 
     let inimigoCtn = document.querySelector("#inimigo")
     inimigoCtn.style.gridArea= inimigo.area.x1+'/'+inimigo.area.x2+'/'+inimigo.area.x3+'/'+inimigo.area.x4
-    inimigoCtn.style.backgroundImage = `url(${inimigo.sprite})`
 
     let nome = inimigo.nome
+
+
     window.setInterval(() => {
                
         for (let i = 0; i < 3; i++) {
