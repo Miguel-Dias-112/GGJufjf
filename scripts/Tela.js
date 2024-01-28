@@ -124,8 +124,21 @@ export function carregarCenario(){
 
     let inimigoCtn = document.querySelector("#inimigo")
     inimigoCtn.style.gridArea= inimigo.area.x1+'/'+inimigo.area.x2+'/'+inimigo.area.x3+'/'+inimigo.area.x4
-    console.log(inimigo.area)
     inimigoCtn.style.backgroundImage = `url(${inimigo.sprite})`
+
+    let nome = inimigo.nome
+    window.setInterval(() => {
+               
+        for (let i = 0; i < 3; i++) {
+            window.setTimeout(()=>{
+                inimigoCtn.style.backgroundImage = `url(${'../../../assets/'+nome+'/teste/s'+i+'.png'})`
+                console.log(inimigo.sprite)
+            },100*i)
+        }
+
+    }, 100*3);
+  
+
     //FIXME back.appendChild(div)
 }
 

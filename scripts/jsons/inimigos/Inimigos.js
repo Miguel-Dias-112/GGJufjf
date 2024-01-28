@@ -1,5 +1,6 @@
 import { getJogador } from "../../Jogador.js"
-import { mostrarFrase } from "../../Tela.js"
+import { carregarCenario, mostrarFrase } from "../../Tela.js"
+import { inimigo } from "../Jogo/Jogo.js"
 export function randomNumberInterval(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a
 }
@@ -14,16 +15,18 @@ function criarFala(texto,dano){
 
 
 
-
 function criarInimigo(nome,fala,area,bottom){
     let inimigo = {}
     inimigo.graca = 0
     inimigo.cenario='../../../assets/'+nome+'/fundo.png'
     inimigo.sprite='../../../assets/'+nome+'/sprite.png'
+    
+    
     inimigo.area=area
     inimigo.nome = nome
     inimigo.bottom=bottom
     inimigo.derrotado=false
+
     inimigo.falas = {
         efetivo:fala[0],
         neutro:fala[1],

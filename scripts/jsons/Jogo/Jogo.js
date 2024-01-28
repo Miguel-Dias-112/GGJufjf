@@ -4,6 +4,7 @@ import { getJogador } from "../../Jogador.js";
 import { PorDecknaTela, animaCartasDescendo, atualizarValores, imprimeResultado } from "../../Tela.js";
 import { criarMapa } from "../../mapa.js";
 import { inimigos } from "../inimigos/Inimigos.js";
+import { tocarTema } from "../../Sons.js";
 const j1 = getJogador();
 
 export let inimigo = inimigos[0]  
@@ -15,7 +16,6 @@ export function setInimigo(_inimigo){
 export function startGame(){
     PorDecknaTela(j1.maodoJogador);
     atualizarValores()
-
 }
 
 export function checaResultado(){
@@ -38,6 +38,7 @@ export function checaResultado(){
 
 criarMapa();
 export  function cicloJogo(carta){
+    
     console.log(carta)
     animaCartasDescendo()
     setTimeout(function(){
@@ -55,6 +56,4 @@ export  function cicloJogo(carta){
         }
     }, 1000);
 
-    
-    
 }

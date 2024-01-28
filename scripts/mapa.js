@@ -1,6 +1,7 @@
 import { carregarCenario } from "./Tela.js";
 import { inimigo, setInimigo,startGame} from "./jsons/Jogo/Jogo.js"
 import { inimigos } from "./jsons/inimigos/Inimigos.js";
+import { tocarTema } from "./Sons.js";
 export function criarFase(){
     console.log("main")
     let main = document.createElement('main')
@@ -62,7 +63,8 @@ export function criarMapa(){
      
         moldura.addEventListener("click", function(){
            if(inimigos[i].derrotado == true){return}
-
+           
+           tocarTema(inimigos[i].nome);
             main.innerHTML = "";
             criarFase()
             setInimigo(inimigos[i])

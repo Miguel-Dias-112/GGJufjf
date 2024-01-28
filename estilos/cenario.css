@@ -1,6 +1,6 @@
 @font-face {
     font-family: anonimosPro;
-    src: url(./assets/AnonymousPro-Regular.ttf);
+    src: url(../assets/AnonymousPro-Regular.ttf);
   }
 
 body{
@@ -51,6 +51,7 @@ main{
     width: 90%;
     aspect-ratio: 2/3;
     z-index: 10;
+    
     background-image: url('./assets/Idosa/Idosa1.png');
     background-repeat: no-repeat;
     background-size: cover;

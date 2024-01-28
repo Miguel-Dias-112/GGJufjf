@@ -37,8 +37,8 @@
     animation: goOut 0.5s ease-in-out alternate;
     animation-fill-mode: forwards;
 }
-.usada :hover{
-    
+.usada:hover{
+
 }
 #mesaCartas .nusada:hover{
     animation: grow 0.5s ease-in-out alternate infinite;
