@@ -17,21 +17,30 @@ O Ofensa em Cartas é um jogo de piadas do tema “Faça me rir” desenvolvido 
 
 ### História e Piadas:
 -Caua Moreno
+
 -Emerson Caneschi
+
 -Estêvão Fiorilo
+
 -Eyshila Santos
+
 -Miguel Dias
+
 
 ### Desenhos, Design e Animação:
 -Emerson Caneschi
+
 -Eyshila Santos
+
 
 ### Programação:
 -Caua Moreno
+
 -Estêvão Fiorilo
--Miguel DIas
+
+-Miguel Dias
 
 ### Composição Musical:
--Caua Moreno
+-Cauã Moreno
 
 Agradecemos também ao suporte oferecido no laboratório e no Discord da Jam, em especial a outros participantes e aos professores que tornaram essa experiencia muito mais divertida e facilitada!
