@@ -1,3 +1,4 @@
+import { carregarCenario } from "./Tela.js";
 import { setInimigo,startGame} from "./jsons/Jogo/Jogo.js"
 import { inimigos } from "./jsons/inimigos/Inimigos.js";
 export function criarFase(){
@@ -48,7 +49,6 @@ export function criarMapa(){
 
     var mapa = document.createElement("div");   
     mapa.classList.add("mapa");
-
     for (let i = 0; i <4; i++) {    
         const moldura = document.createElement("div");
         moldura.classList.add("molduarPersonagem");
@@ -61,6 +61,8 @@ export function criarMapa(){
 
             console.log(inimigos[i])    
             startGame()
+            carregarCenario()
+
         })
 
         mapa.appendChild(moldura);

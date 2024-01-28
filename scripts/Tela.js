@@ -66,3 +66,13 @@ export function atualizarValores(){
     barraInimigo.value = inimigo.graca;
     barraJogador.value = jogador.vida;
 }
+
+
+export function carregarCenario(){
+    let main = document.querySelector("#main")
+
+    main.style.backgroundImage = `url(${inimigo.cenario})`
+
+    let back = document.querySelector("#inimigo")
+    back.style.backgroundImage = `url(${inimigo.sprite})`
+}

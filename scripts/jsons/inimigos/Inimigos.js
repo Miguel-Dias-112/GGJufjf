@@ -17,6 +17,9 @@ function criarFala(texto,dano){
 function criarInimigo(nome,fala){
     let inimigo = {}
     inimigo.graca = 0
+    inimigo.cenario='../../../assets/'+nome+'/fundo.png'
+    inimigo.sprite='../../../assets/'+nome+'/sprite.png'
+
     inimigo.nome = nome
     inimigo.falas = {
         efetivo:fala[0],
@@ -35,12 +38,10 @@ function criarInimigo(nome,fala){
 
  const Idosa = criarInimigo('Idosa',[criarFala("Muito bom!",0),criarFala("Não entendi",1),criarFala("Você vai pro inferno, meu filho",2)])
 
- const GerZ = criarInimigo('Geração Z',[criarFala("Aí sim heim, de ladinho é muito poggers!! ",0),criarFala("Kkkk as ideia",1),criarFala("Porra cringe essa piada ai",2)])
+ const GerZ = criarInimigo('GenZ',[criarFala("Aí sim heim, de ladinho é muito poggers!! ",0),criarFala("Kkkk as ideia",1),criarFala("Porra cringe essa piada ai",2)])
 
  const Militar = criarInimigo('Militar',[criarFala("HAHAHA BRASIL!!",0),criarFala("Mais uma dessas e ",1),criarFala("Que isso, seu bizonho?",2)])
 
  const Padre = criarInimigo('Padre',[criarFala("Hahaha, Que piada divina!",0),criarFala("Que Deus ande contigo",1),criarFala("Que horror, Deus perdoe seus pecados",2)])
 
- const Influencer = criarInimigo('Influencer',[criarFala("Essa vai pro story!",0),criarFala("Eu faria melhor, mas você tem potêncial.",1),criarFala("O que?? Te vejo no tribunal.",2)])
-
-export let inimigos=    [Idosa,GerZ,Militar,Padre,Influencer]
+export let inimigos=    [Idosa,GerZ,Militar,Padre]
