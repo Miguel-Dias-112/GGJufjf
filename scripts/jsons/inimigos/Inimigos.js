@@ -19,8 +19,8 @@ function criarInimigo(nome,fala,area,bottom){
     let inimigo = {}
     inimigo.graca = 0
     inimigo.frame = 0
-    inimigo.cenario='../../../assets/'+nome+'/fundo.png'
-    inimigo.sprite='../../../assets/'+nome+'/sprite.png'
+    inimigo.cenario='./assets/'+nome+'/fundo.png'
+    inimigo.sprite='../assets/'+nome+'/sprite.png'
     
     
     inimigo.area=area

@@ -62,6 +62,7 @@ export function criarMapa(){
 
         
         moldura.classList.add("a"+i);
+    
         moldura.addEventListener("click", function(){
 
 
