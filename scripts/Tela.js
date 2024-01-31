@@ -190,7 +190,11 @@ export function imprimeResultado( resultado){
     let button=document.createElement('button')
 
     button.textContent="Reiniciar"
-    button.addEventListener('click', location.reload);
+    button.addEventListener('click', ()=>{
+        let a = document.createElement('a')
+        a.href="index.html"
+        a.click()
+    });
     div.appendChild(button)
     div.appendChild(h1)
     main.appendChild(div);

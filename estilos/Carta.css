@@ -30,6 +30,22 @@
     font-size: large;
     padding: 10px;
 }
+@media screen and (max-width: 1600px){
+ 
+    #mesaCartas .carta{
+        width: 80%;
+        aspect-ratio:unset;
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        text-align: center;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.418);
+        font-size: large;
+        padding: 0px;
+    }
+}
 .subindo{
     animation: goOut 0.5s ease-in-out reverse;
 }

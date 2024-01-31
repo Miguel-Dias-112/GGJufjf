@@ -18,6 +18,23 @@
 
     z-index: 2;
 }
+.mapa button{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: black 5px solid;
+    background-color: #7b3715;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    font-size: 20px;
+}
 .centralizador{
     width: 50%;
     aspect-ratio: 1/1;

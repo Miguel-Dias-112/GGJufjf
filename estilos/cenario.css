@@ -38,7 +38,29 @@ main{
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(10,1fr);
 }
-
+@media screen and (max-width: 1600px){
+    main, .mapa{
+        width: 90%;
+    }
+    #mesaCartas .carta{
+        width: 100%;
+        aspect-ratio:unset;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        text-align: center;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.418);
+        font-size: large;
+        padding: 0px;
+    }
+    #inimigo{
+        width: 100%;
+        min-width: 180px;
+        aspect-ratio: 2/3;
+    }
+}
 
 #inimigo{
     display: flex;

@@ -50,7 +50,14 @@ export function criarMapa(){
 
     var mapa = document.createElement("div");   
     mapa.classList.add("mapa");
-
+    let voltar = document.createElement("button");
+    voltar.innerHTML = "&#10132;";
+    mapa.appendChild(voltar);
+    voltar.onclick = function(){
+        let a = document.createElement('a')
+        a.href="index.html"
+        a.click()
+    }
     let centralizador = document.createElement('div')
     centralizador.classList.add("centralizador")
     for (let i = 0; i <4; i++) {    
